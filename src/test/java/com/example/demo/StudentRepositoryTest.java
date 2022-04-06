@@ -16,11 +16,13 @@ class StudentRepositoryTest {
     void setup() {
         studentRepository.save(Student.builder()
                 .firstname("Hippo")
-                .lastname("Hippo").build());
+                .lastname("Hippo")
+                .build());
 
         studentRepository.save(Student.builder()
                 .firstname("Hippo")
-                .lastname("Hippy").build());
+                .lastname("Hippy")
+                .build());
     }
 
     @Test
