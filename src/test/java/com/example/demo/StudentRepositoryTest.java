@@ -30,4 +30,9 @@ class StudentRepositoryTest {
     void shouldFindSomeStudent() {
         assertThat(studentRepository.findAll()).isNotEmpty();
     }
+
+    @Test
+    void shouldFindStudentByFirstname() {
+        assertThat(studentRepository.findStudentByFirstname("Hippo")).isNotNull();
+    }
 }
