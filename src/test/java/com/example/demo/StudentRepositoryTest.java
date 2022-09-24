@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import static org.assertj.core.api.Assertions.*;
+
 @DataJpaTest
 class StudentRepositoryTest {
 
@@ -26,7 +28,7 @@ class StudentRepositoryTest {
     }
 
     @Test
-    void findStudentByFirstname() {
-        Assertions.assertThat(studentRepository.findAll()).isNotEmpty();
+    void shouldFindSomeStudent() {
+        assertThat(studentRepository.findAll()).isNotEmpty();
     }
 }
